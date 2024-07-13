@@ -3,13 +3,22 @@ import 'package:checkout_payment_ui/feature/checkout/presentation/views/widgets/
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class PaymentMethods extends StatelessWidget {
-  const PaymentMethods({super.key});
+class PaymentMethodsListView extends StatefulWidget {
+  const PaymentMethodsListView({super.key});
+
+  @override
+  State<PaymentMethodsListView> createState() => _PaymentMethodsListViewState();
+}
+
+class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
   final List<String> paymentMethodItems = const [
     ImagesData.kCard,
     ImagesData.kPaypal,
     ImagesData.kMasterCard,
   ];
+
+  int activeIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,9 +29,14 @@ class PaymentMethods extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: PaymentMethodItem(
-              isActive: false,
-              image: paymentMethodItems[index],
+            child: GestureDetector(
+              onTap: () {
+                setState(() => activeIndex = index);
+              },
+              child: PaymentMethodItem(
+                isActive: activeIndex == index,
+                image: paymentMethodItems[index],
+              ),
             ),
           );
         },

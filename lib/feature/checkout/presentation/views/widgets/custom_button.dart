@@ -2,8 +2,9 @@ import 'package:checkout_payment_ui/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onTap});
+  const CustomButton({super.key, this.onTap, required this.text});
   final Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -19,7 +20,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Complete Payment',
+            text,
             style: Styles.style22,
           ),
         ),
