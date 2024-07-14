@@ -42,4 +42,11 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
     fontFamily: 'Inter',
   );
+  
+  static TextStyle style16 = TextStyle(
+    color: Colors.black.withOpacity(0.699999988079071),
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Inter',
+  );
 }
