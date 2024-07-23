@@ -14,7 +14,6 @@ class _PaymentMethodsListViewState extends State<PaymentMethodsListView> {
   final List<String> paymentMethodItems = const [
     ImagesData.kCard,
     ImagesData.kPaypal,
-    ImagesData.kMasterCard,
   ];
 
   int activeIndex = 0;

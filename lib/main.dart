@@ -8,7 +8,6 @@ void main() {
 class CheckoutApp extends StatelessWidget {
   const CheckoutApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -17,3 +16,7 @@ class CheckoutApp extends StatelessWidget {
     );
   }
 }
+
+// paymentIntentObject create Payment Intent (amount, currency)
+// init payment sheet (paymentIntentClientSecret)
+// presentPaymentSheet()
