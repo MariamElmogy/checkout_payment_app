@@ -37,7 +37,7 @@ class ThankYouViewBody extends StatelessWidget {
           const Positioned(
             left: 0,
             right: 0,
-            top: -25,
+            top: -50,
             child: CustomCheckIcon(),
           ),
         ],

@@ -13,6 +13,7 @@ class ThankYouCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       decoration: ShapeDecoration(
         color: const Color(0XFFEDEDED),
         shape: RoundedRectangleBorder(
@@ -75,18 +76,20 @@ class ThankYouCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
-                  child: Text(
-                    'PAID',
-                    style: Styles.style24.copyWith(
-                      color: const Color(0XFF34A853),
+                  child: Center(
+                    child: Text(
+                      'PAID',
+                      style: Styles.style24.copyWith(
+                        color: const Color(0XFF34A853),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: (MediaQuery.sizeOf(context).height * .2 + 20) / 2 - 29,
+              height: ((MediaQuery.sizeOf(context).height * .2 + 20) / 2) - 29,
             )
           ],
         ),
