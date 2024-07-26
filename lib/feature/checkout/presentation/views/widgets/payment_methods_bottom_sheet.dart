@@ -54,6 +54,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
       builder: (context, state) {
         return CustomButton(
           onTap: () {
+            
             Navigator.of(context).push(MaterialPageRoute(
               builder: (BuildContext context) => PaypalCheckoutView(
                 sandboxMode: true,
