@@ -1,4 +1,4 @@
-import 'item.dart';
+import 'order_item_model.dart';
 
 class ItemListModel {
   List<OrderItemModel>? items;
